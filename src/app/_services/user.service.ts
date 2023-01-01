@@ -19,4 +19,10 @@ export class UserService {
   public getUserBoard(): Observable<any>{
     return this.http.get(API_URL + "user", { responseType: 'text' });
   }
+  public getModeratorBoard(): Observable<any>{
+    return this.http.get(API_URL + "mod", { responseType: 'text' });
+  }
+  public getAdminBoard(): Observable<any>{
+    return this.http.get(API_URL + "admin", { responseType: 'text' });
+  }
 }
