@@ -10,5 +10,13 @@ const API_URL = 'http://localhost:8080/api/test/';
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  public getPublicContent(): Observable<any>{
+    return this.http.get(API_URL + "all", { responseType: 'text' });
+  }
+
+  public getUserBoard(): Observable<any>{
+    return this.http.get(API_URL + "user", { responseType: 'text' });
+  }
 }
