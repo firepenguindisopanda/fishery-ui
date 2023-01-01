@@ -6,7 +6,7 @@ label {
 }
 
 .card-container.card {
-  max-width: 350px !important;
+  max-width: 550px !important;
   padding: 40px 40px;
 }
 
@@ -31,4 +31,24 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+.btn{
+  font-size: 14px;
+  color: #fff;
+  background-color: #4d90fe;
+  letter-spacing: .5px;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color .2s ease,box-shadow .2s ease;
+  transition: background-color .2s ease,box-shadow .2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
