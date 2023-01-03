@@ -7,6 +7,13 @@ import { StorageService } from '../_services/storage.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
+  form: any = {
+    username: null,
+    password: null
+  };
 
+  constructor(private authService: AuthService, private storageService: StorageService) { }
+
+  ngOnInit(){}
 }
