@@ -12,8 +12,13 @@ export class LoginComponent implements OnInit{
     username: null,
     password: null
   };
-
+  isLoggedIn: boolean = false;
+  isLoginFailed: boolean = false;
+  errorMessage: string = '';
+  roles: string[] = [];
   constructor(private authService: AuthService, private storageService: StorageService) { }
 
-  ngOnInit(){}
+  ngOnInit(){
+    
+  }
 }
