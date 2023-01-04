@@ -16,11 +16,15 @@ export class HomeComponent implements OnInit{
         this.content = data;
       },
       error: err => {
-        console.log(err);
         if(err.error){
-          this.content = "Data is temporarily unavailable."
+          try {
+            const res = JSON.parse(err.error);
+            this.content = res.message;
+          } catch (error) {
+            this.content = `Error with status: ${err.status} - ${err.statusText}`;
+          }
         }else{
-          this.content = "You are not authorized to view this page."
+          this.content = `Error with status: ${err.status}`;
         }
       }
     });
