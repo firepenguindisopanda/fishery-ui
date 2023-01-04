@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../_services/storage.service';
 
 @Component({
@@ -6,6 +6,11 @@ import { StorageService } from '../_services/storage.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit{
+  currentUser: string = '';
+  constructor(private storageService: StorageService){}
 
+  ngOnInit(): void{
+    this.currentUser = this.storageService.getUser();
+  }
 }
