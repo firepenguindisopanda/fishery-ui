@@ -34,7 +34,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [httpInterceptorProviders],
+  providers: httpInterceptorProviders,
   bootstrap: [AppComponent]
 })
 export class AppModule { }
